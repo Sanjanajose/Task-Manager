@@ -1,4 +1,4 @@
-/* 🌑 Global Styles */
+/*  Global Styles */
 body {
     background: linear-gradient(to right, #0F2027, #203A43, #2C5364);
     color: white;
@@ -10,7 +10,7 @@ body {
     min-height: 100vh;  /* Ensure footer stays at the bottom */
 }
 
-/* 📌 Centering the Main App */
+/*  Centering the Main App */
 .app {
     display: flex;
     flex-direction: column;
@@ -21,7 +21,7 @@ body {
     flex-grow: 1;
 }
 
-/* 📌 Header */
+/*  Header */
 .header {
     text-align: center;
     margin-bottom: 40px;
@@ -36,7 +36,7 @@ body {
     font-size: 1.2em;
 }
 
-/* 📌 Main Content */
+/*  Main Content */
 .main-content {
     display: flex;
     justify-content: space-between;
@@ -46,7 +46,7 @@ body {
     margin-bottom: 20px;
 }
 
-/* 📌 Task Description */
+/*  Task Description */
 .task-description {
     width: 45%;  /* Ensure it takes up 45% of the screen width */
     background-color: #1E272E;
@@ -56,7 +56,7 @@ body {
     color: #F8F9FA;
 }
 
-/* 📌 Task Description Heading */
+/*  Task Description Heading */
 .task-description h3 {
     font-size: 24px;
     font-weight: bold;
@@ -64,14 +64,14 @@ body {
     margin-bottom: 10px;
 }
 
-/* 📌 Task Description Paragraph */
+/*  Task Description Paragraph */
 .task-description p {
     font-size: 16px;
     color: #D1D5DB;
     line-height: 1.5;
 }
 
-/* 📌 Task List */
+/*  Task List */
 .task-list {
     width: 45%;
 }
@@ -94,7 +94,7 @@ body {
     background-color: #FF6A00;
 }
 
-/* 📌 Task Image */
+/*  Task Image */
 .image-container {
     width: 45%;  /* Move the image container to the right side */
 }
@@ -105,7 +105,7 @@ body {
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* 📌 Footer Styles */
+/*  Footer Styles */
 .footer {
     background-color: #333;
     color: white;
@@ -130,7 +130,7 @@ footer p {
     font-size: 0.9em;
 }
 
-/* 📌 Button Styles */
+/*  Button Styles */
 .task-list-btn {
     background: linear-gradient(to right, #FF6A00, #EE0979);
     padding: 15px 35px;
@@ -166,7 +166,7 @@ footer p {
     overflow: hidden;
 }
 
-/* 🎯 Scrollable Content */
+/*  Scrollable Content */
 .popup-content {
     max-height: 72vh;
     overflow-y: auto;
@@ -174,7 +174,7 @@ footer p {
     border-radius: 10px;
 }
 
-/* 🎯 Scrollbar Customization (Both Vertical & Horizontal) */
+/*  Scrollbar Customization (Both Vertical & Horizontal) */
 .popup-content::-webkit-scrollbar {
     width: 3px;
     height: 3px;
@@ -189,7 +189,7 @@ footer p {
     background-color: #EE0979;
 }
 
-/* ❌ Close Button */
+/*  Close Button */
 .close-btn {
     position: absolute;
     top: 12px;
@@ -210,7 +210,7 @@ footer p {
     transform: scale(1.1);
 }
 
-/* 📌 Popup Title */
+/*  Popup Title */
 .popup-title {
     text-align: center;
     font-size: 24px;
@@ -219,7 +219,7 @@ footer p {
     margin-bottom: 15px;
 }
 
-/* 📌 Header inside Popup */
+/*  Header inside Popup */
 .popup-header {
     display: flex;
     justify-content: space-between;
@@ -251,7 +251,7 @@ footer p {
     background-color: #FF6A00;
 }
 
-/* 📝 Add Task Button */
+/*  Add Task Button */
 .add-task-btn {
     display: block;
     margin: 10px auto;
@@ -270,14 +270,14 @@ footer p {
     transform: scale(1.05);
 }
 
-/* 📌 Task List Container */
+/*  Task List Container */
 .task-container {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-/* 📌 Task Card */
+/*  Task Card */
 .task {
     background: #1E272E;
     padding: 20px;
@@ -287,7 +287,7 @@ footer p {
     margin-bottom: 10px;
 }
 
-/* ✅ Task Title */
+/*  Task Title */
 .task h3 {
     color: #F8F9FA;
     font-size: 22px;
@@ -297,7 +297,7 @@ footer p {
     letter-spacing: 0.5px;
 }
 
-/* 📝 Task Description */
+/*  Task Description */
 .task p {
     font-size: 16px;
     color: #D1D5DB;
@@ -307,14 +307,14 @@ footer p {
     text-align: justify;
 }
 
-/* 🎯 Checkbox */
+/*  Checkbox */
 .task input[type="checkbox"] {
     margin-right: 10px;
     transform: scale(1.2);
     cursor: pointer;
 }
 
-/* 🎯 Task Form Styling */
+/*  Task Form Styling */
 .form-container {
     display: flex;
     flex-direction: column;
@@ -323,7 +323,7 @@ footer p {
     gap: 15px;
 }
 
-/* 🏷 Task Title & Description Styling */
+/* Task Title & Description Styling */
 .form-container label {
     font-size: 14px;
     font-weight: bold;
@@ -332,7 +332,7 @@ footer p {
     display: block;
 }
 
-/* 🎯 Task Title & Description Inputs */
+/* Task Title & Description Inputs */
 .form-container input,
 .form-container textarea {
     width: 100%;
@@ -345,7 +345,7 @@ footer p {
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* ✅ Input Focus */
+/*  Input Focus */
 .form-container input:focus,
 .form-container textarea:focus {
     outline: none;
@@ -354,7 +354,7 @@ footer p {
     background-color: #FFF !important; /* Keep background white */
 }
 
-/* 🎯 Title & Description Specific Styling */
+/*  Title & Description Specific Styling */
 .form-container input {
     height: 45px;
     margin-bottom: 10px;
@@ -366,7 +366,7 @@ footer p {
     margin-bottom: 10px;
 }
 
-/* 📌 Form Buttons */
+/*  Form Buttons */
 .form-buttons {
     display: flex;
     justify-content: space-between;
@@ -375,7 +375,7 @@ footer p {
     margin-top: 15px;
 }
 
-/* 📝 Add Task & Cancel Button */
+/*  Add Task & Cancel Button */
 .form-buttons button {
     width: 48%;
     background: linear-gradient(to right, #FF6A00, #EE0979);
@@ -394,13 +394,13 @@ footer p {
     transform: scale(1.05);
 }
 
-/* 📌 Cancel Button */
+/*  Cancel Button */
 .cancel-btn {
     background: #ccc;
     color: black;
 }
 
-/* 🎯 Custom Checkbox Styling */
+/*  Custom Checkbox Styling */
 .checkbox-container {
     display: flex;
     align-items: center;

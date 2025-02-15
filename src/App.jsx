@@ -1,5 +1,5 @@
 import { useState, useEffect, useReducer } from "react";
-import TaskList from "./components/TaskList"; // Ensure you have this component
+import TaskList from "./components/TaskList"; 
 import illustration from "./assets/sample.png"; // Background Image
 import "./styles.css";
 
