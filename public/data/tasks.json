@@ -1,6 +1,8 @@
 [
-    { "id": 1, "title": "Design UI", "description": "Create Figma mockup", "completed": false },
-    { "id": 2, "title": "Setup Backend", "description": "Initialize Express API", "completed": true },
-    { "id": 3, "title": "Deploy Project", "description": "Push to GitHub Pages", "completed": false }
-  ]
-  
+  { "id": 1, "text": "Lorem ipsum dolor sit amet", "completed": false },
+  { "id": 2, "text": "Lorem ipsum dolor sit amet", "completed": false },
+  { "id": 3, "text": "Lorem ipsum dolor sit amet", "completed": true },
+  { "id": 4, "text": "Lorem ipsum dolor sit amet", "completed": false },
+  { "id": 5, "text": "Lorem ipsum dolor sit amet", "completed": true },
+  { "id": 6, "text": "Lorem ipsum dolor sit amet", "completed": false }
+]

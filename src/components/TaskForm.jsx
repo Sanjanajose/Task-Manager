@@ -1,50 +1,40 @@
-import { useState, useEffect } from "react";
+import React, { useState } from "react";
 
-const TaskForm = ({ addTask, updateTask, editingTask, setEditingTask }) => {
+function TaskForm({ dispatch }) {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
-  const [completed, setCompleted] = useState(false);
 
-  // Set initial values if editingTask is provided
-  useEffect(() => {
-    if (editingTask) {
-      setTitle(editingTask.title);
-      setDescription(editingTask.description);
-      setCompleted(editingTask.completed);
+  const handleAddTask = () => {
+    if (title && description) {
+      const newTask = {
+        id: Date.now(),
+        text: title,
+        description,
+        completed: false,
+      };
+      dispatch({ type: "ADD_TASK", task: newTask });
+      setTitle(""); 
+      setDescription(""); 
     }
-  }, [editingTask]);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const taskData = { id: editingTask ? editingTask.id : Date.now(), title, description, completed };
-
-    if (editingTask) {
-      updateTask(taskData);
-    } else {
-      addTask(taskData);
-    }
-
-    // Reset form
-    setTitle("");
-    setDescription("");
-    setCompleted(false);
-    setEditingTask(null);
   };
 
   return (
-    <form className="form-container" onSubmit={handleSubmit}>
-      <input type="text" placeholder="Task Title" value={title} onChange={(e) => setTitle(e.target.value)} required />
-      <textarea placeholder="Task Description" value={description} onChange={(e) => setDescription(e.target.value)} required></textarea>
-
-      {/* Checkbox for Completion Status */}
-      <label className="checkbox-container">
-        <input type="checkbox" checked={completed} onChange={() => setCompleted(!completed)} />
-        Mark as Completed
-      </label>
-
-      <button type="submit">{editingTask ? "Update Task" : "Add Task"}</button>
-    </form>
+    <div>
+      <input
+        type="text"
+        value={title}
+        onChange={(e) => setTitle(e.target.value)}
+        placeholder="Task title"
+      />
+      <input
+        type="text"
+        value={description}
+        onChange={(e) => setDescription(e.target.value)}
+        placeholder="Task description"
+      />
+      <button onClick={handleAddTask}>Add Task</button>
+    </div>
   );
-};
+}
 
 export default TaskForm;

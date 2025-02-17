@@ -1,19 +1,23 @@
-const Task = ({ task, updateTask, deleteTask, toggleComplete, setEditingTask, setShowTaskForm }) => {
+import React from "react";
+import { FaCheckCircle } from "react-icons/fa";
+import { ActionButton } from "../styles/TaskListStyles"; 
+
+const Task = ({ task, toggleCompletion, deleteTask, setSelectedTask }) => {
   return (
-    <div className="task">
-      <input type="checkbox" checked={task.completed} onChange={() => toggleComplete(task.id)} />
+    <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '10px' }}>
+      <FaCheckCircle 
+        className={`icon ${task.completed ? "completed" : ""}`} 
+        onClick={() => toggleCompletion(task.id)}
+        style={{ color: task.completed ? "green" : "red", cursor: "pointer" }}
+      />
+      <span>{task.text}</span>
+
       <div>
-        <h3>{task.title}</h3>
-        <p>{task.description}</p>
-      </div>
-      <div className="task-actions">
-        <button onClick={() => {
-          setEditingTask(task); // ✅ Set task for editing
-          setShowTaskForm(true); // ✅ Show form when editing
-        }}>
-          Edit
-        </button>
-        <button onClick={() => deleteTask(task.id)}>Delete</button>
+        <ActionButton onClick={() => toggleCompletion(task.id)}>
+          {task.completed ? "Mark as Incomplete" : "Mark as Completed"}
+        </ActionButton>
+        <ActionButton onClick={() => deleteTask(task.id)}>Delete</ActionButton>
+        <ActionButton onClick={() => setSelectedTask(task)}>Edit</ActionButton>
       </div>
     </div>
   );

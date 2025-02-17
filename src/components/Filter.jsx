@@ -1,11 +1,21 @@
-const Filter = ({ setFilter }) => {
+import React from "react";
+
+function Filter({ dispatch }) {
   return (
-    <div className="filter">
-      <button onClick={() => setFilter("all")}>All</button>
-      <button onClick={() => setFilter("active")}>Active</button>
-      <button onClick={() => setFilter("completed")}>Completed</button>
+    <div>
+      <button onClick={() => dispatch({ type: "SET_FILTER", filter: "all" })}>
+        All Tasks
+      </button>
+      <button
+        onClick={() => dispatch({ type: "SET_FILTER", filter: "completed" })}
+      >
+        Completed
+      </button>
+      <button onClick={() => dispatch({ type: "SET_FILTER", filter: "active" })}>
+        Active
+      </button>
     </div>
   );
-};
+}
 
 export default Filter;
